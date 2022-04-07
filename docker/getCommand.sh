@@ -49,4 +49,6 @@ jupyter nbextension enable freeze/main
 git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
 mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -y
 
+pip install -r requirements.txt
+
 echo "end $0"

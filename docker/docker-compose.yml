@@ -17,15 +17,16 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-    - 8888:8888
+    - 4445:4445
     networks:
       - chromenet
     restart: unless-stopped
     shm_size: 2gb
+    platform: linux/amd64
     tty: true
     privileged: true
     stdin_open: true
-    command: jupyter notebook --port 8888 --NotebookApp.token='' --ip=0.0.0.0 --allow-root 
+    command: jupyter notebook --port 4445 --NotebookApp.token='' --ip=0.0.0.0 --allow-root 
     depends_on: 
     - chrome
     environment:
